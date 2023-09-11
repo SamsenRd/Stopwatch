@@ -18,14 +18,14 @@ let timer; //This variable will hold the interval ID for the timer.
 
 function startStopwatch(){
     clearInterval(timer); //Clear any previous intervals to prevent multiple timers.
+
+    let startTime = Date.now(); //get the current time in milliseconds
+
+    timer = setInterval(function (){
+        const elapsedTime = Date.now() - startTime;
+        updateDisplay(elapsedTime);
+    }, 100);
 }
-
-let startTime = Date.now(); //get the current time in milliseconds
-
-timer = setInterval(function (){
-    const elapsedTime = Date.now() - startTime;
-    updateDisplay(elapsedTime);
-}, 100);
 
 function stopStopwatch(){
     clearInterval(timer); //stop the time interval
