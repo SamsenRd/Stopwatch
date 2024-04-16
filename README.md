@@ -1,2 +1,2 @@
 # Stopwatch
-practicing with js
+Use this mini web app to start, stop and restart the time!
